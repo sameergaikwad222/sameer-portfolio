@@ -105,7 +105,7 @@ export default function SameerGaikwadPortfolio() {
             <p className="mt-2 text-lg text-slate-700">{profile.tagline}</p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/resume.pdf" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border shadow-sm hover:shadow-md">
+              <a href={`${import.meta.env.BASE_URL}resume.docx`} download className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border shadow-sm hover:shadow-md">
                 <Download size={16} /> Download Resume
               </a>
               <a href="#projects" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 text-white">
@@ -125,9 +125,9 @@ export default function SameerGaikwadPortfolio() {
             </div>
           </motion.div>
 
-          <motion.aside initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="hidden md:flex flex-col items-center gap-4 bg-gradient-to-b from-white to-slate-50 p-6 rounded-2xl shadow-md">
-            <div className="w-40 h-40 bg-gradient-to-br from-indigo-500 to-sky-400 rounded-full grid place-items-center text-white text-2xl font-bold">
-              <img src="https://media.licdn.com/dms/image/v2/C4D03AQHT7Csd9ycS7g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1612419197020?e=1766620800&v=beta&t=VRF_-UgwaVIP0HIjM8UlM_2RRN75Y5WSCJLkLVOfZ0U" alt="SG" />
+          <motion.aside initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="flex flex-col items-center gap-4 bg-gradient-to-b from-white to-slate-50 p-6 rounded-2xl shadow-md">
+            <div className="w-40 h-40 overflow-hidden bg-gradient-to-br from-indigo-500 to-sky-400 rounded-full">
+              <img src={`${import.meta.env.BASE_URL}myPhoto.jfif`} alt={`${profile.name} profile photo`} width={160} height={160} className="w-full h-full object-cover" />
             </div>
             <div className="text-center">
               <div className="font-semibold">{profile.title}</div>
